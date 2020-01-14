@@ -1,0 +1,132 @@
+.footer__wrapper {
+  padding-bottom: 43px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+    border-top: 1px solid rgba(141, 141, 141, 0.2);
+    padding-top: 18px;
+    margin-bottom: 24px;
+
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  & li {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & a {
+      font-family: $header-font;
+      font-size: 14px;
+      line-height: 19px;
+      color: #000000;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        opacity: 0.7;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+.footer__mail {
+  text-decoration: none;
+  font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #000000;
+transition: 0.2s;
+&:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+
+  & p {
+  font-size: 14px;
+  line-height: 100%;
+  color: #000000;
+  margin-left: -6%;
+  margin-top: 25px;
+  }
+
+  & a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    text-decoration: none;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+  }
+}
+
+.footer__developer {
+  display: flex;
+
+  & a {
+    margin-top: 0;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+  }
+  & p {
+    margin: 0;
+    margin-top: 25px;
+  }
+}
+
+
+@include mobile {
+  .footer__top {
+    flex-direction: column;
+
+    & ul {
+      margin-bottom: 20px;
+    }
+    & li {
+      margin-right: 10%;
+    }
+  }
+
+  .footer__bottom{
+      flex-direction: column;
+        & p {
+          margin-left: 0;
+          order: 2;
+        }
+        & a {
+          margin-top: 0;
+        }
+  }
+  .footer__developer {
+    order: 3;
+  }
+}
