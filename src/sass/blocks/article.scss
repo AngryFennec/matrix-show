@@ -1,0 +1,156 @@
+.article__header {
+  padding-bottom: 10px;
+  position: relative;
+  & h2 {
+    font-family: $header-font;
+font-style: normal;
+font-weight: 700;
+font-size: 54px;
+line-height: 72px;
+color: #020202;
+max-width: 802px;
+margin-top: 22px;
+margin-bottom: 20px;
+  }
+  & p {
+    font-size: 18px;
+line-height: 21px;
+color: #000000;
+margin-bottom: 0;
+
+  }
+  &::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  width: 398px;
+  height: 136px;
+  background: url("../img/tilda.svg") no-repeat;
+  }
+}
+
+
+.article__content {
+  max-width: 800px;
+  margin: 0 auto;
+  & h3 {
+    font-family: $header-font;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 48px;
+color: #000000;
+margin-top: 50px;
+text-align: center;
+margin-bottom: 30px;
+  }
+  & p {
+    font-size: 18px;
+line-height: 30px;
+color: #000000;
+margin-bottom: 10px;
+margin-top: 0;
+  }
+  & ul {
+    list-style: none;
+    & li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 9px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -13px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000000;
+      }
+    }
+  }
+
+  & ol {
+    counter-reset: item;
+    list-style: none;
+    & li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 9px;
+      &::before {
+
+        content: "";
+        position: absolute;
+        content: counter(item) ". ";
+        font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+color: #000000;
+        counter-increment: item;
+        top: 0px;
+        left: -13px;
+
+      }
+    }
+  }
+
+  & table {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(57, 201, 192, 0.2);
+    width: 100%;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  & th {
+    border: none;
+    font-size: 16px;
+line-height: 30px;
+color: #39C9C0;
+font-weight: 700;
+width: 35%;
+padding-bottom: 5px;
+
+  }
+    & td {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-right: 20px;
+      border: none;
+      width: 35%;
+      font-size: 14px;
+line-height: 24px;
+color: #000000;
+vertical-align: top;
+
+    }
+    & tr {
+      border: none;
+      min-height: 47px;
+    }
+
+
+}
+
+.article__img-container {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 30px;
+  & img {
+    width: 100%;
+    //height: auto;
+    object-fit: cover;
+  }
+  &--double {
+    display: flex;
+    justify-content: space-between;
+
+    & img {
+    width: 49%;
+    }
+  }
+}
