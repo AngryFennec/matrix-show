@@ -26,7 +26,7 @@ margin-bottom: 0;
   right: 30px;
   width: 398px;
   height: 136px;
-  background: url("../img/tilda.svg") no-repeat;
+  background: url("../img/tilda.png") no-repeat;
   }
 }
 
@@ -245,6 +245,7 @@ padding-bottom: 2px;
 color: #000000;
 display: inline;
 text-decoration: none;
+
 //text-decoration: underline;
 //text-underline-offset: 30px;
 //text-decoration-thickness: 2px;
@@ -254,6 +255,12 @@ border-bottom: 2px solid #04A285;
 //background-position: 0 125%;
 //background-repeat: repeat-x;
 //background-size: 6px 6px;
+cursor: pointer;
+transition: 0.2s;
+&:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
       }
     }
   }
@@ -264,4 +271,115 @@ border-bottom: 2px solid #04A285;
   margin: 0 auto;
   padding-top: 32px;
   padding-bottom: 70px;
+}
+
+@include tablet {
+  .article__similar-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@include mobile {
+  .article__header {
+    & h2 {
+      font-family: $header-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+    }
+      &::after {
+        content: none;
+      }
+  }
+  .article__content {
+    margin-bottom: 0;
+    & h3 {
+      font-size: 22px;
+      line-height: 120%;
+      margin-bottom: 15px;
+      margin-top: 15px;
+
+    }
+    & table {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    & th {
+      font-size: 14px;
+line-height: 26px;
+width: 33%;
+    }
+    & td {
+      font-size: 12px;
+line-height: 20px;
+width: 33%;
+    }
+  }
+
+  .article__share {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    & span {
+  padding-top: 2px;
+
+  margin-right: 20px;
+
+
+    }
+    & ul {
+      flex-wrap: wrap;
+      & li {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .article__similar {
+    border: 5px solid #39C9C0;
+    margin-top: 20px;
+
+    & h2 {
+      font-family: $header-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  color: #202538;
+  margin-top: 0;
+  margin-bottom: 25px;
+    }
+
+    & ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 60px;
+      max-width: 600px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -53px;
+        background: url("../img/similar.png") no-repeat;
+        background-size:cover;
+        width: 30px;
+        height: 31px;
+      }
+      & li {
+        margin-bottom: 10px;
+        & a {
+          font-size: 16px;
+  line-height: 28px;
+
+        }
+      }
+    }
+  }
 }
