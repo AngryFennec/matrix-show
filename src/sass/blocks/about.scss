@@ -1,0 +1,129 @@
+.about {
+  h2 {
+    font-family: $header-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 22px;
+  }
+}
+
+.about__content {
+  border: 1px solid rgba(57, 201, 192, 0.5);
+  padding: 30px;
+
+  & p {
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+  }
+}
+
+.about__contacts {
+  padding-top: 60px;
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin-bottom: 30px;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+      max-width: 290px;
+      min-width: 198px;
+      flex-wrap: wrap;
+      margin-right: 57px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & span {
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height */
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #39C9C0;
+        margin-bottom: 9px;
+      }
+
+      & p {
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        margin: 0;
+      }
+
+      & a {
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+        color: #000000;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          transition: 0.2s;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+.about__map {
+  height: 309px;
+  width: 100%;
+  margin-bottom: 28px;
+
+  & iframe {
+    width: 100%;
+  }
+}
+
+@include mobile {
+  .about__contacts {
+    padding-top: 60px;
+    & ul {
+      flex-direction: column;
+      & li {
+        min-width: 0;
+        margin-right: 30px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        & span {
+          margin-bottom: 0;
+          margin-right: 10px;
+          padding-top: 4px;
+
+        }
+      }
+    }
+  }
+  .about {
+    & h2 {
+      font-size: 24px;
+      line-height: 120%;
+      margin-top: 25px;
+    }
+
+  }
+  .about__content {
+    padding: 15px;
+
+}
+}
