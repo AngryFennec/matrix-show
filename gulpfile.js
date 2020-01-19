@@ -57,8 +57,7 @@ gulp.task('css', function () {
       grid: "autoplace"
     }))
     .pipe(gulp.dest('build/css'))
-    .pipe(cssMinify())
-    .pipe(rename('style.min.css'))
+    .pipe(rename('style.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
 });
