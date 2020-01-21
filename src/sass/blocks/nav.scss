@@ -1,6 +1,10 @@
 
-
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+}
 .nav {
+
   input {display: none;}
   label {
     display: none;
@@ -15,7 +19,7 @@
       margin-right: 20px;
       cursor: pointer;
       transition: 0.2s;
-      border-bottom: 1px solid rgba(141, 141, 141, 0.5);
+
       &:last-child {
         margin-right: 0;
       }
@@ -32,13 +36,16 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #8D8D8D;
+        border-bottom: 1px solid rgba(141, 141, 141, 0.5);
+        padding-bottom: 4px;
       }
 
       &.nav__item--active {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
 
         & a {
           color: #010101;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         }
       }
     }
@@ -50,6 +57,7 @@
 
 .nav {
 
+
   input {display: none;}
   label {
     z-index: 1;
@@ -58,41 +66,28 @@
   }
   user-select: none;
   & ul {
-    overflow: hidden;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 220px;
-      margin: 0;
-      padding: 17px 0;
-      overflow-y: auto;
-      background-color: white;
-      -webkit-overflow-scrolling: touch;
-      transform: translateX(-100%);
-      transition: transform .3s;
-      will-change: transform;
-      backface-visibility: hidden;
-      z-index: 10;
-      padding-top: 70px;
-      text-align: left;
+flex-direction: column;
 
 
 
   & li {
-    padding-left: 25px;
-    padding-right: 25px;
+
       display: block;
       text-align: left;
       text-decoration: none;
       border-bottom: none;
       margin-right: 0;
     &.nav__item--active {
+      & a {
+      border-bottom: none;
+    }
+    }
+    & a {
       border-bottom: none;
     }
   }
   }
+
 
 
 .nav__showmenu {
@@ -115,6 +110,32 @@
     transition: background-color .3s;
 }
 
+.nav__content {
+  overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 220px;
+    margin: 0;
+    padding: 17px 0;
+    overflow-y: auto;
+    background-color: white;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    backface-visibility: hidden;
+    z-index: 10;
+    padding-top: 70px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+}
 
 
 
@@ -126,6 +147,6 @@
 
 
 .nav__check:checked+.nav__showmenu {color:#000; z-index: 15;}
-.nav__check:checked~ul {transform: translateX(0);}
+.nav__check:checked~.nav__content{transform: translateX(0);}
 }
 }
