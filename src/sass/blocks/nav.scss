@@ -75,14 +75,19 @@
       will-change: transform;
       backface-visibility: hidden;
       z-index: 10;
+      padding-top: 70px;
+      text-align: left;
 
 
 
   & li {
+    padding-left: 25px;
+    padding-right: 25px;
       display: block;
-      text-align: center;
+      text-align: left;
       text-decoration: none;
       border-bottom: none;
+      margin-right: 0;
     &.nav__item--active {
       border-bottom: none;
     }
