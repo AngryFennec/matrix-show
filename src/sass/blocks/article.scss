@@ -26,8 +26,8 @@
     position: absolute;
     bottom: 10px;
     right: 30px;
-    width: 398px;
-    height: 136px;
+    width: 403px;
+    height: 140px;
     background: url("../img/tilda.png") no-repeat;
   }
 }
@@ -172,9 +172,9 @@
   margin-bottom: 30px;
 
   & img {
-    width: 100%;
-    //height: auto;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    //object-fit: contain;
   }
 
   &--double {
@@ -183,6 +183,8 @@
 
     & img {
       width: 49%;
+      height: auto;
+      object-fit: contain;
     }
   }
 }

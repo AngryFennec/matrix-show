@@ -157,21 +157,21 @@
 @include mobile {
   .news__head-list {
     & ul {
-      margin-left: 50px;
+      margin-left: 0;
+      flex-wrap: nowrap;
       &::before {
-        left:-50px;
-        width: 21px;
-        height: 9px;
-        background: url("../img/tilda-min-fill.svg") no-repeat;
-        background-size: contain;
+        content: none;
 
       }
       & li {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        margin-right: 8px;
         & a {
-          white-space: pre-wrap;
-          font-size: 14px;
+          white-space: nowrap;
+          font-size: 9px;
           line-height: 120%;
+          letter-spacing: auto;
+          padding-bottom: 2px;
         }
       }
     }
