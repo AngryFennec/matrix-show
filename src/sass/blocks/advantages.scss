@@ -37,12 +37,17 @@
       display: flex;
       flex-direction: column;
       max-width: 200px;
-      margin-right: 8%;
+      margin-right: 6%;
       &:last-child {
         margin-right: 0;
+        & span {
+          & span {
+            right: 23px;
+          }
+        }
       }
       &:nth-child(2) {
-        margin-right: 13.3%;
+        margin-right: 18%;
       }
 
 
@@ -53,6 +58,16 @@
         line-height: 41px;
         color: #39C9C0;
         font-weight: 700;
+        position: relative;
+        display: inline;
+        & span {
+          background: url("../img/rub.svg") no-repeat;
+          position: absolute;
+          top: 22%;
+          right: -40px;
+          height: 43px;
+          width: 30px;
+        }
       }
 
       & p {
@@ -84,7 +99,7 @@
     & li  {
       margin-right: 3%;
       &:nth-child(2) {
-        margin-right: 5%;
+        margin-right: 12%;
       }
     }
   }
@@ -116,6 +131,12 @@
       margin-right: 0;
       width: 220px;
       max-width: 220px;
+      & span  {
+        & span {
+          right: 17px;
+        }
+      }
+
     }
   }
 }
@@ -151,11 +172,23 @@ margin-left: 20px;
           margin-right: 0;
           max-width: 100%;
           width: 100%;
+          & span {
+            & span {
+              left: 112px;
+            }
+          }
         }
 
         & span {
+
           font-size: 24px;
           line-height: 120%;
+          & span {
+            height: 28px;
+            width: 15px;
+            left: 77px;
+            background-size: contain;
+          }
 
         }
         & p {
