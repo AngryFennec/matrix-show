@@ -107,10 +107,18 @@ transition: 0.2s;
     margin: 0;
     margin-top: 25px;
   }
+
+  & img:last-child {
+    display: none;
+  }
 }
 
 
 @include mobile {
+
+  .footer {
+    background-color: #FAFAFA;
+  }
   .footer__phone-mobile {
     display: block;
         font-size: 14px;
@@ -129,28 +137,42 @@ transition: 0.2s;
     display: none;
   }
   .footer__top {
-justify-content: space-between;
-margin-bottom: 15px;
-    & ul {
-      margin-bottom: 20px;
+      // justify-content: space-between;
+      margin-bottom: 15px;
       flex-direction: column;
-      order: 2;
+      border-top: none;
+      padding-top: 29px;
+    & ul {
+      flex-direction: row;
+      order: -1;
+      margin-bottom: 20px;
+      // flex-direction: column;
+      // order: 2;
       width: auto;
       text-align: right;
 
     }
     & li {
-      margin-right: 0;
+      margin-right: 30px;
       margin-bottom: 8px;
+
+      & a {
+        font-size: 14px;
+        line-height: 19px;
+
+        color: #39C9C0;
+      }
     }
   }
 
   .footer__bottom{
+    margin-top: 20px;
     justify-content: space-between;
+    flex-direction: column;
         & p {
           margin-left: 0;
           order: 2;
-          font-size: 12px;
+          font-size: 14px;
           line-height: 100%;
           margin-top: 18px;
         }
@@ -160,20 +182,41 @@ margin-bottom: 15px;
   }
   .footer__developer {
     & p {
-      font-size: 10.7638px;
-line-height: 100%;
-margin-top: 19px;
+      display: none;
     }
     & a{
       margin-right: 8px;
+
       & img {
-        width: 51px;
-        height: 37px;
+        width: 67px;
+        height: auto;
       }
+    }
+
+    & img:last-child {
+      display: inline;
+    }
+
+    & img:first-child {
+      display: none;
     }
 
   }
   .footer__contacts {
-    padding-top: 90px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+
+    & a:first-of-type {
+      font-weight: bold;
+      margin-top: 12px;
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .footer__top li {
+    margin-right: 20px;
   }
 }

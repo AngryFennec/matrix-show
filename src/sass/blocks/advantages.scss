@@ -157,7 +157,8 @@ margin-left: 20px;
 
 @include mobile {
   .advantages__wrapper {
-    padding-top: 10px;
+    padding-top: 15px;
+    background-color: #FAFAFA;
   }
   .advantages {
     & h2 {
@@ -166,32 +167,41 @@ margin-left: 20px;
     }
     & ul {
       flex-direction: column;
+      margin-bottom: 5px;
       & li {
         max-width: 100%;
+        margin-bottom: 13px;
+
+        &:first-child {
+          order:1;
+          max-width: 175px;
+        }
         &:nth-child(2) {
           margin-right: 0;
           max-width: 100%;
           width: 100%;
           & span {
             & span {
-              left: 112px;
+              left: 133px;
             }
           }
         }
 
         & span {
 
-          font-size: 24px;
-          line-height: 120%;
+          font-size: 28px;
+          line-height: 32px;
           & span {
             height: 28px;
             width: 15px;
-            left: 77px;
+            left: 93px;
             background-size: contain;
           }
 
         }
         & p {
+          font-size: 12px;
+          line-height: 14px;
           margin-top: 5px;
         }
       }
@@ -200,6 +210,7 @@ margin-left: 20px;
 
   .advantages__title-container {
     justify-content: flex-start;
+    display: none;
     & span {
 
       margin-top: 13px;

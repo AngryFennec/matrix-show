@@ -79,11 +79,11 @@ flex-direction: column;
       margin-right: 0;
     &.nav__item--active {
       & a {
-      border-bottom: none;
+      // border-bottom: none;
     }
     }
     & a {
-      border-bottom: none;
+      // border-bottom: none;
     }
   }
   }
@@ -98,6 +98,15 @@ flex-direction: column;
     padding: 5px 10px 10px;
     top: 2px;
     font-size: 23px;
+    min-height: 22px;
+
+    & img:last-child {
+      display: none;
+    }
+
+    & img:first-child {
+      display: block;
+    }
 }
 
 .nav__back {
@@ -111,13 +120,14 @@ flex-direction: column;
 }
 
 .nav__content {
+  box-sizing: border-box;
   overflow: hidden;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     display: block;
-    width: 220px;
+    width: 100%;
     margin: 0;
     padding: 17px 0;
     overflow-y: auto;
@@ -131,10 +141,31 @@ flex-direction: column;
     padding-top: 70px;
     text-align: left;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
-    padding-left: 25px;
+    padding-left: 30px;
     padding-right: 25px;
+    padding-top: 180px;
+    
+    &::after {
+      content:"";
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 42px;
+      height: 17px;
+      background: url("../img/tilda-min-fill.svg") no-repeat 0 0;
+    }
+
+    & li {
+      margin-bottom: 40px;
+    }
+
+    & a {
+      color: #010101;
+      font-size: 24px;
+      border-bottom: 1px solid #000;
+    }
 }
 
 
@@ -146,7 +177,19 @@ flex-direction: column;
 }
 
 
-.nav__check:checked+.nav__showmenu {color:#000; z-index: 15;}
+.nav__check:checked+.nav__showmenu {
+  color:#000; z-index: 15;
+  top: 22px;
+  position: fixed;
+
+  & img:last-child {
+    display: block;
+  }
+
+  & img:first-child {
+    display: none;
+  }
+}
 .nav__check:checked~.nav__content{transform: translateX(0);}
 }
 }
