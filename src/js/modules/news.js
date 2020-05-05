@@ -24,6 +24,7 @@
             slidesPerView: 1.3,
             spaceBetween: 30,
             slidesPerGroup: 1,
+            loop: true
 
           },
 
