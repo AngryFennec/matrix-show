@@ -160,14 +160,38 @@ color: #000000;
     & h2 {
       font-size: 24px;
       line-height: 120%;
+      padding-bottom: 16px;
+      margin-top: 0;
+
       &::after {
-        top: 10px;
-        right: 0;
+        top: calc(100% - 1px);
+        right: calc(100% - 21px);
           width: 21px;
           height: 9px;
           background: url("../img/tilda-min-fill.svg") no-repeat;
           background-size: contain;
       }
     }
+
+    &__content a {
+      width: 100%;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      text-align: center;
+      height: auto;
+      margin-top: 6px;
+
+      & span {
+        padding-right: 95px;
+        position: relative;
+
+        &::after {
+          bottom: 0;
+          left: calc(100% - 65px);
+        }
+      }
+    }
   }
+
+
 }

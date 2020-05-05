@@ -62,11 +62,28 @@ justify-content: flex-start;
   }
   .page-title__info {
     padding-top: 0;
+    position: absolute;
+    top: 29px;
+    right: 40px;
+    margin-right: 0;
+
+    & a::after {
+      display: none;
+    }
   }
   .page-title__text {
     & h1 {
-      font-size: 30px;
+      margin-top: 15px;
+      font-size: 36px;
       line-height: 140%;
     }
 }
+}
+
+@media(max-width: 374px) {
+  .page-title__text {
+    & h1 {
+      font-size: 30px;
+    }
+  }
 }
