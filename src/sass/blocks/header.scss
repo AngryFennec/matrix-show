@@ -147,7 +147,10 @@
   }
 }
 
-@include mobile() {
+@include tablet() {
+  .nav {
+    min-height: 43px;
+  }
   .nav .header__social {
     & svg {
       fill: #39C9C0;
