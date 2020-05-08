@@ -214,6 +214,7 @@
   .news__content {
 
     & .swiper-container-horizontal > .swiper-pagination-bullets {
+      display: none;
       position: relative;
       margin-top: -10px;
       width: 140px;
